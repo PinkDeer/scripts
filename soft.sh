@@ -37,4 +37,9 @@ sudo apt-get install deadbeef
 echo "\033[02;32mDeaDBeeF was installed\033[00m"
 echo ""
 
+# Installation Deluge
+echo "\033[02;31mInstallation Deluge\033[00m"
+sudo apt-get install deluge
+echo "\033[02;32mDeluge was installed\033[00m"
+
 echo "\033[01;32mAll software was installed\033[00m"
