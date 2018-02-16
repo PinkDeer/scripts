@@ -80,7 +80,9 @@ sudo apt-get update
 sudo apt-get install postgresql-common
 sudo apt-get install postgresql-9.5 libpq-dev
 
-#sudo -u postgres createuser chris -s
+echo "User name:"
+read postgres
+sudo -u postgres createuser $postgres -s
 
 # If you would like to set a password for the user, you can do the following
 #sudo -u postgres psql
