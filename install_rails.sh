@@ -38,7 +38,7 @@ case $ruby in
      1)
           echo "\033[02;31mInstalling ruby 2.5.0....\033[00m"
           rbenv install 2.5.0
-          #rbenv global 2.5.0
+          rbenv global 2.5.0
           ;;
      2)
           echo "\033[02;31mInstalling ruby 2.4.3....\033[00m"
@@ -100,7 +100,38 @@ echo "\033[02;31mInstalling Rails...\033[00m"
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
-gem install rails -v 5.1.4
+printf 'Select version Ruby: (1) 5.1.4, (2)  5.0.6 (3) 4.2.9, (4) 4.1.16, (5) 4.0.13, (6) 3.2.22.5? '
+read ruby
+case $ruby in
+     1)
+          echo "\033[02;31mInstalling ruby 5.1.4....\033[00m"
+          gem install rails -v 5.1.4
+          ;;
+     2)
+          echo "\033[02;31mInstalling ruby 5.0.6....\033[00m"
+          rbenv install 5.0.6
+          ;;
+     3)
+          echo "\033[02;31mInstalling ruby 4.2.9....\033[00m..."
+          rbenv install 4.2.9
+          ;;
+     4)
+          echo "\033[02;31mInstalling ruby 4.1.16....\033[00m..."
+          rbenv install 4.1.16
+          ;;
+     5)
+          echo "\033[02;31mInstalling ruby 4.0.13....\033[00m..."
+          rbenv install 4.0.13
+          ;;
+     6)
+          echo "\033[02;31mInstalling ruby 3.2.22.5....\033[00m..."
+          rbenv install 3.2.22.5
+          ;;
+     *)
+          echo "There is no such option"
+          ;;
+esac
+
 rbenv rehash
 
 #--------------------------------------------------------------------
