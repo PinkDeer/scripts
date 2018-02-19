@@ -100,9 +100,9 @@ echo "\033[02;31mInstalling Rails...\033[00m"
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
-printf 'Select version Ruby: (1) 5.1.4, (2)  5.0.6 (3) 4.2.9, (4) 4.1.16, (5) 4.0.13, (6) 3.2.22.5? '
-read ruby
-case $ruby in
+printf 'Select version Rails: (1) 5.1.4, (2)  5.0.6 (3) 4.2.9, (4) 4.1.16, (5) 4.0.13, (6) 3.2.22.5? '
+read rails
+case $rails in
      1)
           echo "\033[02;31mInstalling Rails 5.1.4....\033[00m"
           gem install rails -v 5.1.4
