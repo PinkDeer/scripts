@@ -42,4 +42,15 @@ echo "\033[02;31mInstallation Deluge\033[00m"
 sudo apt-get install deluge
 echo "\033[02;32mDeluge was installed\033[00m"
 
+#  Installation FileZilla
+
+echo "\033[02;31mInstallation FileZilla\033[00m"
+sudo sh -c 'echo "deb http://archive.getdeb.net/ubuntu xenial-getdeb apps" >> /etc/apt/sources.list.d/getdeb.list'
+wget -q -O - http://archive.getdeb.net/getdeb-archive.key | sudo apt-key add -
+sudo apt update
+sudo apt install filezilla
+echo "\033[02;32mFileZilla was installed\033[00m"
+# Remove FileZilla
+# sudo apt-get remove filezilla
+
 echo "\033[01;32mAll software was installed\033[00m"
